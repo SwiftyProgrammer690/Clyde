@@ -38,6 +38,33 @@ def hex_spiral(user_count):
     x += 5
     y += 5
 
+def spiral():
+  # import turtle
+
+  # initialising variables
+  dist = 1
+  flag = 300
+
+  # initialising turtle
+  spiral = turtle.Turtle()
+
+  # changing speed of turtle
+  spiral.speed(50)
+  spiral.shape('classic')
+
+  # making patten
+  while flag:
+  
+    # makes the turtle to move forward
+    spiral.forward(dist)
+  
+    # makes the turtle to move left
+    spiral.left(121)
+    dist += 1
+    flag -= 1
+
+  turtle.done()
+
 #Where the magic begins
 main_input = input('What would you like to do for now? 1. Get Inspired, 2. Make Clyde Draw ')
 
@@ -47,3 +74,4 @@ elif main_input == '2':
   shape_select = input("What ")
 else:
   print("Not valid option. Try again")
+
