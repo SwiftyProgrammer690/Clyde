@@ -56,5 +56,5 @@ else:
 for i in range(1000):
     t.forward(x)
     t.right(y)
-    x += 1
-    y += 1
+    x += 5
+    y += 5
