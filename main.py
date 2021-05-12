@@ -31,15 +31,12 @@ def rectangle(user_side_1, user_side_2):
     t.forward(user_side_2)
     t.right(90)
 
-x = 5
-y = 5
-
-def spiral(user_turn):
-  for i in range(user_turn):
+def hex_spiral(user_count):
+  for i in range(user_count):
     t.forward(x)
     t.right(y)
-    x += 1
-    y += 1
+    x += 5
+    y += 5
 
 '''
 #Where the magic begins
