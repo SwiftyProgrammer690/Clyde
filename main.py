@@ -65,6 +65,8 @@ def spiral():
 
   turtle.done()
 
+spiral()
+
 #Where the magic begins
 main_input = input('What would you like to do for now? 1. Get Inspired, 2. Make Clyde Draw ')
 
