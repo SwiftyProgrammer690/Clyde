@@ -1,11 +1,11 @@
-from random import *
+from random import choice
 import turtle
 
 inspirational_quotes = ['Never give up', 'Belive in yourself', 'Focus on good', 'Without fear, there is no hope', 'Be you', 'Where ever you go, go with your hearth']
 
 #Choose random message from inspirational_quotes array
 def choose_inspire_quote():
-  print(random.choice(inspirational_quotes))
+  print(choice(inspirational_quotes))
   
 #Init turtle
 t = turtle.Turtle()
@@ -31,8 +31,11 @@ def rectangle(user_side_1, user_side_2):
     t.forward(user_side_2)
     t.right(90)
 
-def hex_spiral(user_count):
-  for i in range(user_count):
+def hex_spiral():
+  x = 0
+  y = 0
+  
+  for i in range(100):
     t.forward(x)
     t.right(y)
     x += 5
@@ -63,7 +66,7 @@ def spiral():
 
   turtle.done()
 
-spiral()
+
 
 #Where the magic begins
 main_input = input('What would you like to do for now? 1. Get Inspired, 2. Make Clyde Draw ')
@@ -84,7 +87,7 @@ elif main_input == '2':
 
   elif shape_select == "3":
     user_tri_side = input("What should be the sides of the triangle? ")
-    triange(user_tri_side)
+    triangle(user_tri_side)
 
   elif shape_select == "4":
     hex_spiral()
