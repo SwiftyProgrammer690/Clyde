@@ -38,7 +38,7 @@ def hex_spiral(user_count):
     x += 5
     y += 5
 
-'''
+
 #Where the magic begins
 main_input = input('What would you like to do for now? 1. Get Inspired, 2. Make Clyde Draw ')
 
@@ -48,10 +48,3 @@ elif main_input == '2':
   shape_select = input("What ")
 else:
   print("Not valid option. Try again")
-'''
-
-for i in range(1000):
-    t.forward(x)
-    t.right(y)
-    x += 5
-    y += 5
