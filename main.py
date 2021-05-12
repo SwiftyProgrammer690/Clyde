@@ -21,7 +21,7 @@ def square(user_side):
 
 def triangle(user_side):
   for i in range(3):
-    t.forward(100)
+    t.forward(user_side)
     t.right(120)
 
 def rectangle(user_side_1, user_side_2):
@@ -38,30 +38,28 @@ def hex_spiral(user_count):
     x += 5
     y += 5
 
-def spiral():
-  # import turtle
-
-  # initialising variables
+def tri_spiral():
   dist = 1
   flag = 300
+  
+  
+  t.speed(50)
 
-  # initialising turtle
-  spiral = turtle.Turtle()
-
-  # changing speed of turtle
-  spiral.speed(50)
-  spiral.shape('classic')
-
-  # making patten
   while flag:
-  
-    # makes the turtle to move forward
-    spiral.forward(dist)
-  
-    # makes the turtle to move left
-    spiral.left(121)
+    t.forward(dist)
+    t.left(121)
+    
     dist += 1
     flag -= 1
+
+  turtle.done()
+
+
+  
+def spiral():
+  for i in range(100):
+    t.forward(5+i)
+    t.right(15)
 
   turtle.done()
 
@@ -72,8 +70,34 @@ main_input = input('What would you like to do for now? 1. Get Inspired, 2. Make 
 
 if main_input == '1':
   choose_inspire_quote()
+
 elif main_input == '2':
-  shape_select = input("What ")
+  shape_select = input("What would Clyde like to draw? 1. Square, 2. Circle, 3. Triangle, 4. Hexagonical Spiral, 5. Triangular Spiral, 6 Regular Spiral ")
+
+  if shape_select == "1":
+    user_sq_side = input("What should be the sides of the square? ")
+    square(user_sq_side)
+ 
+  elif shape_select == "2":
+    user_rad = input("What should be the radius of the circle? ")
+    circle(user_rad)
+
+  elif shape_select == "3":
+    user_tri_side = input("What should be the sides of the triangle? ")
+    triange(user_tri_side)
+
+  elif shape_select == "4":
+    hex_spiral()
+
+  elif shape_select == "5":
+    tri_spiral()
+
+  elif shape_select == "6":
+    spiral()
+
+  else:
+    print("Invalid response!")
+
 else:
   print("Not valid option. Try again")
 
